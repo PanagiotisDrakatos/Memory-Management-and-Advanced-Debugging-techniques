@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="github-markdown.css">
 
+
+<article>
 # A. DEFINING THE BASIC MEMORY CONCEPTS
 
 In this mini post-series we’ll explore  the  memory management layout of the c++ objects according to the total knowledge and experience that we have gained by far. To begin with, we will include some advanced techniques which is very low level and i dont believe that they are exist in many future posts.
@@ -555,3 +557,5 @@ Here is the memory layout for the <b>VTT</b>:
 
   From the Figure 3.3  we observe the structure of VTT. This table is a table from VTables and its basically  role is to make the right translation and switch to the corresponding virtual table. In order for the compiler to switch to the corresponding offset of the construction table, it first looks at the VTT. VTT contains all the available VTables and, depending on each case, it can calculate the correct offset and jump there as shown in <b>Table 3.3</b>. <u>For example when the constructor is called for Parent 1 the compiler, through VTT, will be transferred correctly through <b>virtual offset</b> into table Parent 1, hence it knows that it will access the methods of GrandParent through Parent 1 construction table</u>.
   
+  
+ </article>
