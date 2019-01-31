@@ -208,10 +208,10 @@ In the previous section we saw an example with a single inheritance. In this sub
 <p align="center"><b><u>Figure 2.1</u></b></p>
 
 
-<figure>
-<img src="Images/Figure2.2.png" alt="Snow" style="width:100%">
-</figure>
-<p align="center"><b><u>Figure 2.2</u></b></p>
+<p align="center">
+  <img src="Images/Figure2.2.png" align="center" style="width:100%">
+    <p align="center"><b>Figure 2.2</b></p>
+</p>
 
 Here is the memory object layout of Child:
 
@@ -305,10 +305,10 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
 
  <b>According</b> to the above code. This means that statically the compiler will find the offset of the pointer  for the VTable Father but before calling the method Father: FatherFoo() it will pass from a dynamic piece of code which is called <b>thunk</b> adjustment <u>(is the dynamic call which adjust the pointer to <b>this</b> only if there is a problem just like in our example). As we can see from <b>Table 2.1</b> and as shown in Figure 2.3 from the column "values",  the memory position <i>0x8000edd</i>,  will switch directly and jump   with not any special overhead at the correct memory position <i>0x8000ed2</i> in order to make the correct offset adjustment and finally call the correct  method Child: FatherFoo() which overrides Father: FatherFoo().</u>
 
-<figure>
-<img src="Images/Figure2.3.png" alt="Snow" style="width:100%">
-</figure>
-<p align="center"><b><u>Figure 2.3</u></b></p>
+<p align="center">
+  <img src="Images/Figure2.3.png" align="center" style="width:100%">
+    <p align="center"><b>Figure 2.3</b></p>
+</p>
 
  <b>Attention!!</b> <i>Note here that the problem of this special dynamic translation which is done through thunk for correcting the offset would not exist if the class Child would override from Mother and made the cast because the compiler puts the methods of child close and under the same vtable of Mother so through the pointer to <b>"this"</b> there would be the right method for the child without having to move to a dynamic piece of code and switch to another memory address.</i>
 
@@ -318,10 +318,10 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
 
  In the previous sections we have seen how the  memory layout of objects exists in memory in the simple cases. The one with the single and the other with multiple inheritance. In this section we will deepen further to explore what is happening in the case of Virtual inheritance. The source code for this example is under the subdirectory <a href="Vtable/Virtual_Inheritance">Virtual_Inheritance</a>. However, before we begin the further deepening, let's see how how we separate intuitively this two different occasions. This difference appears by defining the keyword virtual when we inherit as shown below.
 
-<figure>
-<img src="Images/Figure3.1.png" alt="Snow" style="width:100%">
-</figure>
-<p align="center"><b><u>Figure 3.1</u></b></p>
+<p align="center">
+  <img src="Images/Figure3.1.png" align="center" style="width:100%">
+    <p align="center"><b>Figure 3.1</b></p>
+</p>
 
  Practically this means, that in the memory management layout of the VChild as shown in the following figure, we expect the Grandparent instance to be uniquely identified onle once and play the role both for the Parent 1 or 2. As opposite, with the multiple inheritance where each parent should have his own GrandParent. As a result, its offset of the virtual methods must be adjusted appropriately hence, we can visit the correct methods when they react as Parent1 or Parent2
 
