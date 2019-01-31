@@ -57,7 +57,7 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 <br>
 <figure align="center">
-  <img src="images/Figurea.png" alt="Snow" style="width:50%">
+  <img src="Images/Figurea.png" alt="Snow" style="width:50%">
 </figure>
 
   Firstly, if we want to understand how objects are structured in memory, we need to understand how much space is allocated and which is the difference between a simple  and a virtual method call. As we can see from the example above, the size of NonVirtualClass is 1, because the size in C ++ classes cannot be zero. However, the size of VirtualClass is 8 (if someone has 32-bit Architecture he will see 4) although practically one could ask why the size is different, since both classes have one method  without any private or public values. This difference is due to the fact that in the second case there is a hidden pointer in the internal memory object layout with cost of 4 bytes + 4 bytes of some padding which is added. This pointer points to a Virtual Table. This static table is created for each Virtual Class and contains the virtual methods of the class. More specifically, it is an implementation of dynamic dispatch pattern.
