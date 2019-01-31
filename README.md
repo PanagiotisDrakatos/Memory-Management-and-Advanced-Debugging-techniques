@@ -329,9 +329,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
 
 
 <p align="center">
-<div style="display: flex; justify-content: center;">
-<img align="center" src="Images/Figureb.png" alt="Snow" style="width:20%">
-</div>
+  <img src="Images/Figureb.png" align="center" style="width:100%">
 </p>
 
  In <b><u>Figure 3.2</b></u> we observe the memory layout in the case of virtual inheritance. We are impressed by the fact that there is enough new material to study that we had not met before.
