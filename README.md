@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style.css">
+
 # A. DEFINING THE BASIC MEMORY CONCEPTS
 
 In this mini post-series we’ll explore  the  memory management layout of the c++ objects according to the total knowledge and experience that we have gained by far. To begin with, we will include some advanced techniques which is very low level and i dont believe that they are exist in many future posts.
