@@ -33,7 +33,7 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 
 <figure align="center">
-  <img src="Images/Figure1.3.png" alt="Snow" style="width:100%">
+  <img src="Images/Figure1.3.png" align="center" style="width:100%">
     <p align="center"><b>Figure 1.3</b></p>
 </figure>
 
