@@ -348,7 +348,7 @@ Initially our <u>first point</u> about this example  is that we have <b>3  Vptr 
 Here is the memory object layout of VChild:
 
 
-<figure>
+<p>
 <table align="center">
   <tr>
     <th>Address</th>
@@ -428,7 +428,7 @@ Pointer of vptr points here</b>
   </tr>
 </table>
 <p align="center"><b><u>Table 3.1</b></u></p>
-</figure>
+</p>
 
 <figure>
 <img src="Images/Figure3.3.png" alt="Snow" style="width:100%">
