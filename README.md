@@ -1,28 +1,4 @@
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding-left: 5px;
-  margin: 12px 113px 12px 12px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-  
-}
-table, th, td {
-  float:center;
-  width:33%;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 
 # A. DEFINING THE BASIC MEMORY CONCEPTS
 
@@ -37,11 +13,11 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 <div class="row">
   <div class="column">
-    <img src="images/Figure1.1.png" alt="Snow" style="width:100%">
+    <img src="Images/Figure1.1.png" alt="Snow" style="width:100%">
      <p align="center"><b>Figure 1.1</b></p>
   </div>
   <div class="column">
-    <img src="images/Figure1.2.png" alt="Forest" style="width:100%">
+    <img src="Images/Figure1.2.png" alt="Forest" style="width:100%">
      <p align="center"><b>Figure 1.2</b></p>
   </div>
 </div>
@@ -50,14 +26,14 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 
 <figure align="center">
-  <img src="images/Figure1.3.png" alt="Snow" style="width:100%">
+  <img src="Images/Figure1.3.png" alt="Snow" style="width:100%">
     <p align="center"><b>Figure 1.3</b></p>
 </figure>
 
 
 <br>
 <figure align="center">
-  <img src="images/Figurea.png" alt="Snow" style="width:50%">
+  <img src="Images/Figurea.png" alt="Snow" style="width:50%">
 </figure>
 
   Firstly, if we want to understand how objects are structured in memory, we need to understand how much space is allocated and which is the difference between a simple  and a virtual method call. As we can see from the example above, the size of NonVirtualClass is 1, because the size in C ++ classes cannot be zero. However, the size of VirtualClass is 8 (if someone has 32-bit Architecture he will see 4) although practically one could ask why the size is different, since both classes have one method  without any private or public values. This difference is due to the fact that in the second case there is a hidden pointer in the internal memory object layout with cost of 4 bytes + 4 bytes of some padding which is added. This pointer points to a Virtual Table. This static table is created for each Virtual Class and contains the virtual methods of the class. More specifically, it is an implementation of dynamic dispatch pattern.
@@ -70,7 +46,7 @@ clang++ -std=c++14 -stdlib=libc++ -g main.cpp && gdb ./a.out
 ```
 
 <figure>
-  <img src="images/Figure1.4.png" alt="Snow" style="width:100%">
+  <img src="Images/Figure1.4.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.4</b></u></p>
 
@@ -108,7 +84,7 @@ $5 = (Derived) {<Parent> = {_vptr.Parent = 0x8201d28 <vtable for Derived+16>}
 So the header of the offset will be located in the memory address -0x10 of 0x8201d28 which means 0x8201d18. As shown  in **Figure 1.5**.
 
 <figure>
-<img src="images/Figure1.5.png" alt="Snow" style="width:120%">
+<img src="Images/Figure1.5.png" alt="Snow" style="width:120%">
 </figure>
 <p align="center"><b>Figure 1.5</b></p>
 
@@ -203,7 +179,7 @@ With a simpler way, we could give, for example, a similar command through the co
 
 
 <figure>
-<img src="images/Figure1.6.png" alt="Snow" style="width:100%">
+<img src="Images/Figure1.6.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.6</u></b></p>
 
@@ -215,7 +191,7 @@ g++ -fdump-class-hierarchy -c main.cpp
 ```
 
 <figure>
-<img src="images/Figure1.7.png" alt="Snow" style="width:100%">
+<img src="Images/Figure1.7.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.7</u></b></p>
 
@@ -232,13 +208,13 @@ In the previous section we saw an example with a single inheritance. In this sub
 
 
 <figure>
-<img src="images/Figure2.1.png" alt="Snow" style="width:120%">
+<img src="Images/Figure2.1.png" alt="Snow" style="width:120%">
 </figure>
 <p align="center"><b><u>Figure 2.1</u></b></p>
 
 
 <figure>
-<img src="images/Figure2.2.png" alt="Snow" style="width:100%">
+<img src="Images/Figure2.2.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 2.2</u></b></p>
 
@@ -335,7 +311,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
  <b>According</b> to the above code. This means that statically the compiler will find the offset of the pointer  for the VTable Father but before calling the method Father: FatherFoo() it will pass from a dynamic piece of code which is called <b>thunk</b> adjustment <u>(is the dynamic call which adjust the pointer to <b>this</b> only if there is a problem just like in our example). As we can see from <b>Table 2.1</b> and as shown in Figure 2.3 from the column "values",  the memory position <i>0x8000edd</i>,  will switch directly and jump   with not any special overhead at the correct memory position <i>0x8000ed2</i> in order to make the correct offset adjustment and finally call the correct  method Child: FatherFoo() which overrides Father: FatherFoo().</u>
 
 <figure>
-<img src="images/Figure2.3.png" alt="Snow" style="width:100%">
+<img src="Images/Figure2.3.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 2.3</u></b></p>
 
@@ -348,7 +324,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
  In the previous sections we have seen how the  memory layout of objects exists in memory in the simple cases. The one with the single and the other with multiple inheritance. In this section we will deepen further to explore what is happening in the case of Virtual inheritance. The source code for this example is under the subdirectory <a href="Vtable/Virtual_Inheritance">Virtual_Inheritance</a>. However, before we begin the further deepening, let's see how how we separate intuitively this two different occasions. This difference appears by defining the keyword virtual when we inherit as shown below.
 
 <figure>
-<img src="images/Figure3.1.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.1.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.1</u></b></p>
 
@@ -357,7 +333,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
 
 <figure>
 <div style="display: flex; justify-content: center;">
-<img align="center" src="images/Figureb.png" alt="Snow" style="width:20%">
+<img align="center" src="Images/Figureb.png" alt="Snow" style="width:20%">
 </div>
 </figure>
 
@@ -369,7 +345,7 @@ Initially our <u>first point</u> about this example  is that we have <b>3  Vptr 
 
 
 <figure>
-<img src="images/Figure3.2.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.2.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.2</u></b></p>
 
@@ -460,7 +436,7 @@ Pointer of vptr points here</b>
 </figure>
 
 <figure>
-<img src="images/Figure3.3.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.3.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.3</u></b></p>
 
