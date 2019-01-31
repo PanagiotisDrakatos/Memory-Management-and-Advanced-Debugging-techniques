@@ -1,11 +1,3 @@
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="github-markdown.css">
-<link rel="stylesheet" href="style.css">
-</head>
-
-</html>
 
 # A. DEFINING THE BASIC MEMORY CONCEPTS
 
@@ -18,31 +10,16 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 - Libc++-dev
 
 
-´´´html
-<style>
-{
-  box-sizing: border-box;
-}
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding-left: 5px;
-  margin: 12px 113px 12px 12px;
-}
+<p align="center">
+  <img src="Images/Figure1.1.png" align="center" style="width:100%">
+    <p align="center"><b>Figure 1.1</b></p>
+</p>
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-  
-}
-table, th, td {
-  float:center;
-  width:33%;
-}
-</style>
+<figure align="center">
+  <img src="Images/Figure1.2.png" align="center" style="width:100%">
+    <p align="center"><b>Figure 1.2</b></p>
+</figure>
 
 <div class="row">
   <div class="column">
