@@ -20,11 +20,11 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 <div class="row">
   <div class="column">
-    <img src="Images/Figure1.1.png" alt="Snow" style="width:100%">
+    <img src="Images/Figure1.1.png" align="center" style="width:100%">
      <p align="center"><b>Figure 1.1</b></p>
   </div>
   <div class="column">
-    <img src="Images/Figure1.2.png" alt="Forest" style="width:100%">
+    <img src="Images/Figure1.2.png" align="center" style="width:100%">
      <p align="center"><b>Figure 1.2</b></p>
   </div>
 </div>
