@@ -1,3 +1,4 @@
+<dl>
 <style>
 * {
   box-sizing: border-box;
@@ -357,7 +358,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
 
 <figure>
 <div style="display: flex; justify-content: center;">
-<img align="center" src="images/Figureb.png" alt="Snow" style="width:20%">
+<img align="center" src="Images/Figureb.png" alt="Snow" style="width:20%">
 </div>
 </figure>
 
@@ -369,7 +370,7 @@ Initially our <u>first point</u> about this example  is that we have <b>3  Vptr 
 
 
 <figure>
-<img src="images/Figure3.2.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.2.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.2</u></b></p>
 
@@ -460,7 +461,7 @@ Pointer of vptr points here</b>
 </figure>
 
 <figure>
-<img src="images/Figure3.3.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.3.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.3</u></b></p>
 
