@@ -18,16 +18,43 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 - Libc++-dev
 
 
+´´´html
+<style>
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-left: 5px;
+  margin: 12px 113px 12px 12px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+table, th, td {
+  float:center;
+  width:33%;
+}
+</style>
+
 <div class="row">
   <div class="column">
-    <img src="Images/Figure1.1.png" align="center" style="width:100%">
+    <img src="images/Figure1.1.png" alt="Snow" style="width:100%">
      <p align="center"><b>Figure 1.1</b></p>
   </div>
   <div class="column">
-    <img src="Images/Figure1.2.png" align="center" style="width:100%">
+    <img src="images/Figure1.2.png" alt="Forest" style="width:100%">
      <p align="center"><b>Figure 1.2</b></p>
   </div>
 </div>
+´´´
 
 
 
