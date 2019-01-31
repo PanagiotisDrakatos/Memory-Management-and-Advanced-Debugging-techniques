@@ -37,11 +37,11 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 <div class="row">
   <div class="column">
-    <img src="images/Figure1.1.png" alt="Snow" style="width:100%">
+    <img src="Images/Figure1.1.png" alt="Snow" style="width:100%">
      <p align="center"><b>Figure 1.1</b></p>
   </div>
   <div class="column">
-    <img src="images/Figure1.2.png" alt="Forest" style="width:100%">
+    <img src="Images/Figure1.2.png" alt="Forest" style="width:100%">
      <p align="center"><b>Figure 1.2</b></p>
   </div>
 </div>
@@ -50,7 +50,7 @@ In this mini post-series we’ll explore  the  memory management layout of the c
 
 
 <figure align="center">
-  <img src="images/Figure1.3.png" alt="Snow" style="width:100%">
+  <img src="Images/Figure1.3.png" alt="Snow" style="width:100%">
     <p align="center"><b>Figure 1.3</b></p>
 </figure>
 
@@ -70,7 +70,7 @@ clang++ -std=c++14 -stdlib=libc++ -g main.cpp && gdb ./a.out
 ```
 
 <figure>
-  <img src="images/Figure1.4.png" alt="Snow" style="width:100%">
+  <img src="Images/Figure1.4.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.4</b></u></p>
 
@@ -108,7 +108,7 @@ $5 = (Derived) {<Parent> = {_vptr.Parent = 0x8201d28 <vtable for Derived+16>}
 So the header of the offset will be located in the memory address -0x10 of 0x8201d28 which means 0x8201d18. As shown  in **Figure 1.5**.
 
 <figure>
-<img src="images/Figure1.5.png" alt="Snow" style="width:120%">
+<img src="Images/Figure1.5.png" alt="Snow" style="width:120%">
 </figure>
 <p align="center"><b>Figure 1.5</b></p>
 
@@ -203,7 +203,7 @@ With a simpler way, we could give, for example, a similar command through the co
 
 
 <figure>
-<img src="images/Figure1.6.png" alt="Snow" style="width:100%">
+<img src="Images/Figure1.6.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.6</u></b></p>
 
@@ -215,7 +215,7 @@ g++ -fdump-class-hierarchy -c main.cpp
 ```
 
 <figure>
-<img src="images/Figure1.7.png" alt="Snow" style="width:100%">
+<img src="Images/Figure1.7.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 1.7</u></b></p>
 
@@ -232,13 +232,13 @@ In the previous section we saw an example with a single inheritance. In this sub
 
 
 <figure>
-<img src="images/Figure2.1.png" alt="Snow" style="width:120%">
+<img src="Images/Figure2.1.png" alt="Snow" style="width:120%">
 </figure>
 <p align="center"><b><u>Figure 2.1</u></b></p>
 
 
 <figure>
-<img src="images/Figure2.2.png" alt="Snow" style="width:100%">
+<img src="Images/Figure2.2.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 2.2</u></b></p>
 
@@ -335,7 +335,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
  <b>According</b> to the above code. This means that statically the compiler will find the offset of the pointer  for the VTable Father but before calling the method Father: FatherFoo() it will pass from a dynamic piece of code which is called <b>thunk</b> adjustment <u>(is the dynamic call which adjust the pointer to <b>this</b> only if there is a problem just like in our example). As we can see from <b>Table 2.1</b> and as shown in Figure 2.3 from the column "values",  the memory position <i>0x8000edd</i>,  will switch directly and jump   with not any special overhead at the correct memory position <i>0x8000ed2</i> in order to make the correct offset adjustment and finally call the correct  method Child: FatherFoo() which overrides Father: FatherFoo().</u>
 
 <figure>
-<img src="images/Figure2.3.png" alt="Snow" style="width:100%">
+<img src="Images/Figure2.3.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 2.3</u></b></p>
 
@@ -348,7 +348,7 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
  In the previous sections we have seen how the  memory layout of objects exists in memory in the simple cases. The one with the single and the other with multiple inheritance. In this section we will deepen further to explore what is happening in the case of Virtual inheritance. The source code for this example is under the subdirectory <a href="Vtable/Virtual_Inheritance">Virtual_Inheritance</a>. However, before we begin the further deepening, let's see how how we separate intuitively this two different occasions. This difference appears by defining the keyword virtual when we inherit as shown below.
 
 <figure>
-<img src="images/Figure3.1.png" alt="Snow" style="width:100%">
+<img src="Images/Figure3.1.png" alt="Snow" style="width:100%">
 </figure>
 <p align="center"><b><u>Figure 3.1</u></b></p>
 
