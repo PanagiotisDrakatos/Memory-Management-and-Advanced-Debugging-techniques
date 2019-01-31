@@ -1,5 +1,7 @@
 
-# A. DEFINING THE BASIC MEMORY CONCEPTS
+ # Advanced Programming Techniques
+
+## A. DEFINING THE BASIC MEMORY CONCEPTS
 
 In this mini post-series we’ll explore  the  memory management layout of the c++ objects according to the total knowledge and experience that we have gained by far. To begin with, we will include some advanced techniques which is very low level and i dont believe that they are exist in many future posts.
 
@@ -326,11 +328,11 @@ due to the fact that the FatherFoo is overridden by the Child we expect to call 
  Practically this means, that in the memory management layout of the VChild as shown in the following figure, we expect the Grandparent instance to be uniquely identified onle once and play the role both for the Parent 1 or 2. As opposite, with the multiple inheritance where each parent should have his own GrandParent. As a result, its offset of the virtual methods must be adjusted appropriately hence, we can visit the correct methods when they react as Parent1 or Parent2
 
 
-<figure>
+<p align="center">
 <div style="display: flex; justify-content: center;">
 <img align="center" src="Images/Figureb.png" alt="Snow" style="width:20%">
 </div>
-</figure>
+</p>
 
  In <b><u>Figure 3.2</b></u> we observe the memory layout in the case of virtual inheritance. We are impressed by the fact that there is enough new material to study that we had not met before.
 
