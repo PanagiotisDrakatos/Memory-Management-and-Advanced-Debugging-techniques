@@ -86,7 +86,7 @@ So the header of the offset will be located in the memory address -0x10 of 0x820
   According to the <u>**Figure 1.5**</u> we can come to the following information as presented in <u>**Table 1.1**</u> and <u>**Table 1.2**</u>
 
 
-<figure>
+<p align="center">
 <table align="center">
   <tr>
     <th>Address</th>
@@ -115,7 +115,7 @@ So the header of the offset will be located in the memory address -0x10 of 0x820
   </tr>
 </table>
 <p align="center"><b><u>Table 1.1</b></u></p>
-</figure>
+</p>
 
  Here is the memory layout for object Derived:
 
