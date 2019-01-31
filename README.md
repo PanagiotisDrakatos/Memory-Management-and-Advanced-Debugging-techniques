@@ -1,30 +1,4 @@
-<dl>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding-left: 5px;
-  margin: 12px 113px 12px 12px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-  
-}
-table, th, td {
-  float:center;
-  width:33%;
-}
-</style>
-
-
+<link rel="stylesheet" href="style.css">
 # A. DEFINING THE BASIC MEMORY CONCEPTS
 
 In this mini post-series we’ll explore  the  memory management layout of the c++ objects according to the total knowledge and experience that we have gained by far. To begin with, we will include some advanced techniques which is very low level and i dont believe that they are exist in many future posts.
