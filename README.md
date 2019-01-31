@@ -1,6 +1,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="github-markdown.css">
+<style>
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-left: 5px;
+  margin: 12px 113px 12px 12px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+table, th, td {
+  float:center;
+  width:33%;
+}
+</style>
 
 
 <article>
